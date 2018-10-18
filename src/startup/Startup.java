@@ -24,7 +24,7 @@ public class Startup {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws ParseException {
-        
+        // estoy probando como va esto
         
         ArrayList <Usuario> usuarios  = new ArrayList();
         ArrayList <Objeto> auxObjetos = new ArrayList(); // esta nos biene bien para cuando tengamos que listar en la opcion 3 solo los objetos
