@@ -26,9 +26,10 @@ public class Startup {
     public static void main(String[] args) throws ParseException {
         
         ArrayList <Usuario> usuarios  = new ArrayList();
-        ArrayList <Objeto> auxObjetos = new ArrayList(); // esta nos biene bien para cuando tengamos que listar en la opcion 3 solo los objetos
+        ArrayList <Objeto> auxObjetos = new ArrayList(); // esta nos viene bien para cuando tengamos que listar en la opcion 3 solo los objetos
         ArrayList <AlquilarObjeto> prestamos = new ArrayList();
         
+        //variables
         double coste, forStartup = 0.0;
         int opcion = 0;
         int idPropietarioObjeto;
