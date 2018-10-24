@@ -372,32 +372,24 @@ public class Startup {
                     break;
                     
                 case 8:
+                    fich = new FileWriter("output.txt");
+                    for(int i = 0; i < usuarios.size(); i++){
+                        if(usuarios.get(i).tieneObjetos() && auxObjetos.get(i).getTieneAlquiler()){
+                            fich.append(usuarios.get(i).ToString());
+                            fich.append(auxObjetos.get(i).mostrarPrestamos());
+                            prestamo = auxObjetos.get(i).getAlquiler().get(i);
+                            coste = prestamo.calcularCoste();
+                            forStartup = (0.10*coste) + forStartup;
+                        }
+                    }
                     
+                    fich.append(String.valueOf(forStartup));
+                    
+                    fich.close();
                     break;
                 
                 case 9:
-                    System.out.println("RELLENE LOS DATOS PARA DAR DE BAJA EL USUARIO: \n"
-                            + "\t Id del propietario que se desee dar de baja: ");
-                    idPropietario9 = sc.nextLine();
                     
-                    solonumeros9 = soloNumeros(idPropietario9);
-                    
-                    //hata que lometa bien
-                    while (!solonumeros9){
-                        System.out.println("El id solo puede ser un numero, introduzca el id: ");
-                        idPropietario9 = sc.nextLine();
-                        solonumeros9 = soloNumeros(idPropietario9);
-                    }
-                    if(!usuarios.get(Integer.valueOf(idPropietario9)- 1).isBaja() || Integer.valueOf(idPropietario9) < usuarios.size()){
-                        for(int i = 0; i < usuarios.get(Integer.valueOf(idPropietario9)- 1).getObjetosEnAlquiler().size(); i++){
-                            usuarios.get(Integer.valueOf(idPropietario9)- 1).getObjetosEnAlquiler().get(i).setDisponible(false);
-                            idobjeto9 = usuarios.get(Integer.valueOf(idPropietario9)- 1).getObjetosEnAlquiler().get(i).getIdobjeto();
-                            auxObjetos.get(idobjeto9).setDisponible(false);
-                        }
-                    }
-                    else{
-                        System.out.println("El cliente no existe");
-                    }
                     
                     break;
                 case 10:
