@@ -1,0 +1,10 @@
+
+PROPIETARIO 1
+Nombre: nerea
+Correo: nerea@gmail.com
+
+		PRÉSTAMOS DEL OBJETO 1
+			Nombre del cliente: nerea
+			Fechas del préstamo: Thu Oct 25 00:00:00 CEST 2018-Sun Nov 25 00:00:00 CET 2018
+			Importe para el propietario: 1550.0
+			Importe para la Startup: 155.0310.0
