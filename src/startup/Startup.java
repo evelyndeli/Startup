@@ -372,20 +372,7 @@ public class Startup {
                     break;
                     
                 case 8:
-                    fich = new FileWriter("output.txt");
-                    for(int i = 0; i < usuarios.size(); i++){
-                        if(usuarios.get(i).tieneObjetos() && auxObjetos.get(i).getTieneAlquiler()){
-                            fich.append(usuarios.get(i).ToString());
-                            fich.append(auxObjetos.get(i).mostrarPrestamos());
-                            prestamo = auxObjetos.get(i).getAlquiler().get(i);
-                            coste = prestamo.calcularCoste();
-                            forStartup = (0.10*coste) + forStartup;
-                        }
-                    }
                     
-                    fich.append(String.valueOf(forStartup));
-                    
-                    fich.close();
                     break;
                 
                 case 9:
